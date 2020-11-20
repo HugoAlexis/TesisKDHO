@@ -1,0 +1,230 @@
+\documentclass[letterpaper,12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{svg}
+\usepackage[top=1.5cm, right=1.5cm, left=3cm, bottom=2cm]{geometry}
+\usepackage{setspace}
+\pagestyle{plain}
+
+
+\usepackage{graphicx}
+
+\begin{document}
+	
+	\begin{titlepage}
+
+		
+		\begin{center}
+			
+			\noindent
+			\hspace{-0.1\textwidth}\rule{1.1\textwidth}{4px}\vspace{-0.08cm}
+			
+			\hspace{-0.1\textwidth}\rule{1.1\textwidth}{8px}\vspace{-0.23cm}
+			
+			\hspace{-0.1\textwidth}\rule{1.1\textwidth}{4px}
+			
+	
+			\hspace{-0.125\textwidth}\Huge{UNIVERSIDAD DE GUADALAJARA}
+			
+			\hspace{-0.125\textwidth}\large{CENTRO UNIVERSITARIO DE CIENCIAS EXACTAS E INGENIERÍAS}
+			
+			\noindent
+			\hspace{-0.1\textwidth}\rule{1.1\textwidth}{4px}\vspace{-0.2cm}
+			
+			\hspace{-0.1\textwidth}\rule{1.1\textwidth}{8px}\vspace{-0.33cm}
+			
+			\hspace{-0.1\textwidth}\rule{1.1\textwidth}{4px}
+		\end{center}
+		
+		
+		\begin{center}
+			
+			
+			\begin{figure}[h!]
+				\centering
+				\includegraphics[width=5cm]{Escudo.pdf}
+			\end{figure}
+		
+			
+		\huge{Termodinámica del oscilador armónico pateado clásico}
+		
+		\rule{1\textwidth}{7px}\vspace{-.8cm}
+		\rule{1\textwidth}{3px}
+		
+		\Huge\textbf{TESIS}
+		
+		\hbox spread 0.4\linewidth{\Large{QUE PARA OBTENER EL TÍTULO DE}}
+		
+		
+		
+		\Huge\textbf{LICENCIADO EN FÍSICA}
+		
+		\hbox spread 0.75\linewidth{\Large{P R E S E N T A}}
+		
+		
+		\Huge\textbf{{HUGO ALEXIS TORRES PASILLAS}}
+		
+		\huge{\textbf{Director: }Dr. Thomas Gorin}
+			
+		\rule{1\textwidth}{7px}\vspace{-.75cm}
+		\rule{1\textwidth}{3px}
+		
+		\end{center}
+	
+	\begin{flushright}
+		\Large{INVIERNO, 2020}
+	\end{flushright}
+\vspace{-1.7cm}
+	\begin{flushleft}
+		\Large{Guadalajara, Jal. Méx}
+	\end{flushleft}
+		
+	\end{titlepage}
+	\renewcommand{\baselinestretch}{2}
+	\pagenumbering{Roman}
+	\doublespacing
+	\begin{flushright}
+		
+		\large{\emph{Dedicatoria}}
+	\thispagestyle{empty}
+	\end{flushright}
+	\newpage
+	\thispagestyle{empty}
+
+		{\huge \textbf{AGRADECIMIENTOS}}
+		
+	
+	\newpage
+	
+	\chapter*{Resumen}
+	
+	Consideramos un sistema estadístico compuesto por partículas en un potencial de oscilador
+	armónico acoplado a un reservorio térmico, sujeto a patadas periódicas. Mediante el uso de las
+	ecuaciones clásicas se obtienen las trayectorias en el espacio de fase, primero suponiendo que la
+	temperatura del reservorio es cero, y posteriormente considerando una temperatura mayor utilizando la ecuación de Langevin. Típicamente se estudian colecciones de trayectorias, lo cual permite
+	considerar la función de distribución en el espacio de fase. El comportamiento de esta función
+	es similar a su equivalente cuántico. Una vez que el sistema alcanza el cuasi-equilibrio, donde la
+	energía disipada por el sistema en forma de calor es igual a la recibida por las patadas, se estudia	la validez de la ley de Fourier para el sistema. Se comparan las distribuciones de las trayectorias de	las partículas en el cuasi-equilibrio con las distribuciones de Boltzmann. Finalmente, se estudian 2 ciclos termodinámicos y se compararan con los del oscilador sin patadas.
+	
+
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\newpage
+	
+	\newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	
+	\chapter{Introducción}
+		El oscilador armónico pateado es un sistema que ha sido estudiado anteriormente por varios autores en distintos regímenes. La dinámica de este sistema resulta de gran interés por varias razones: por un lado, su dinámica presenta islas de integrabilidad en el espacio de fase para ciertos parámetros, rodeadas por zonas en las que la dinámica es caótica \cite{1991ProblemChaos}. Por otro, debido a la posibilidad de realizarse de manera experimental mediante una trampa armónica de átomos que interaccionan con l\'aseres, en el que resulta posible controlar los parámetros del sistema\cite{2012Experimental}. Además, es uno de los pocos sistemas caóticos o mixtos (el único hasta donde conocemos), donde se tiene una ecuación maestra para describir el acoplamiento del sistema a un reservorio térmico, y esto no solo en el caso clásico sino también para el sistema cuántico \cite{2017Prado}.
+		
+		El objetivo de estudio de este sistema ha sido variado: en el régimen clásico, su enfoque principal ha sido el estudio de su espacio de fase y las islas de integrabilidad que presenta \cite{2019dynamics, 2008StabilityChaos}, mientras que en el r\'egimen cu\'antico su estudio ha sido m\'as variado, estudiando el sistema como un ejemplo de caos, su comportamiento al ser acoplado con un reservorio t\'ermico, el entrelazamiento entre los estados del sistema, entre otros \cite{1991ProblemChaos, 2017Prado, 2016Entanglement}. As\'i mismo, este sistema ha sido utilizado para el estudio de la transici\'on entre el r\'egimen cl\'asico y el cu\'antico, debido a que es posible modificar la constante efectiva de Planck $h_{\rm eff}$, mediante la modificaci\'on del par\'ametro de Lamb-Dicke \cite{2004Transition}. E incluso se han realizado estudios experimentales del sistema \cite{1991ProblemChaos, 2017Prado}.
+		
+		En 2003, Robert F. Mudde and all. realizaron un estudio de los osciladores arm\'onicos pateados formados al poner borbujas en el fondo de un tubo en U lleno de agua, enfocandose en las trayectorias que se formaban en su espacio de fase y el efecto de la fuerza de amortiguamiento. M\'as recientemente, en 2017 Miguel A. P. Reynoso et al. presentaron un art\'iculo en el que estudian el sistema cu\'antico acoplado a un baño t\'ermico, en diferentes reg\'imenes entre la integrabilidad del sistema y el caos, concluyendo que la energ\'ia del sistema estaba regido por la ley de Fourier en los estados estacionarios. As\'i, surgen las siguientes dudas: ¿c\'omo podr\'ia hacerse una descripci\'on termodin\'amica del sistema cl\'asico an\'alogo al presentado en \cite{2017Prado}? y ¿qu\'e similitudes habr\'ia entre ambos sistemas?
+		
+		El principal objetivo de este trabajo es estudiar el sistema clásico análogo al sistema cuántico estudiado en \cite{2017Prado}. De los dos efectos del entorno (disipación y difusión), comenzamos despreciando el segundo término, lo que de cierta forma es equivalente a un sistema en contacto con un entorno a temperatura cero, para obtener el efecto de la fuerza de amortiguamiento en el espacio de fase del sistema. Posteriormente, consideramos también la temperatura del reservorio resolviendo la ecuación de Langevin, donde se agrega una fuerza aleatoria que modifica las trayectorias de las partículas, generando un movimiento browniano \cite{1998LangevinEquation}.
+		
+		Debido al acoplamiento del sistema con el reservorio térmico, cada trayectorias del sistema se vuelve aleatoria, por lo que consideramos una colectividad con muchas trayectorias y estudiamos la estadística sobre esta. Por un lado podemos pensar en un gran número de átomos, todos siguiendo su propia trayectoria en el espacio de fase. Así, en un tiempo dado se tiene una distribución de puntos, la cual se puede describir con la función de distribución. Por otro lado podemos pensar en un solo sistema y la probabilidad de encontrarlo en un tiempo dado en cierto lugar del espacio de fase. Antes y después de cada patada, se encuentra esta función de distribución y se comparan con su equivalente en el régimen cuántico, las funciones de Wigner.
+		
+		Al obtener la función de distribución antes y después de cada patada, presentamos la evolución de la energía promedio de las partículas durante las patadas, la cual llega a un estado estacionario donde la energía disipada al reservorio en forma de calor es la misma que la energía suministrada por las patadas. En estos estados estacionarios estudiamos si el intercambio de calor entre el sistema y el entorno cumple o no la ley de Fourier.
+		
+		A continuación, comparamos la función de distribución antes y después de las patadas con las correspondientes distribuciones de Boltzmann analíticas para el oscilador arm\'onico, utilizando la divergencia de Kullback-Leibler (entre otros) para cuantificar las diferencias.
+		
+		Finalmente, realizamos dos ciclos termodinámicos en los que utilizamos procesos con y sin patadas, con el que comparamos los procesos isotérmicos y adiabáticos del oscilador armónico con el sistema con patadas.
+	\chapter{Preliminares}
+	
+	\chapter{Teoría}
+	
+	El oscilador arm\'onico pateado es un sistema f\'isico cuya din\'amica est\'a descrita por el Hamiltoniano siguiente:
+	
+	\begin{equation}\label{Hamiltoniano}
+		H = \omega \hbar \left[ \frac{p^2}{2} + \frac{x^2}{2} \right] + \frac{\kappa}{\sqrt{2}\eta^2} \cos \left( \sqrt{\frac{2\hbar}{m\omega}}\eta x  \right) \sum_{n\in\Re}\delta(t - n\tau_k),
+	\end{equation}
+	
+	\noindent donde se ha tomado la posici\'on y el momento como 
+	
+	\begin{equation}\label{CambioVariables}
+		x = \sqrt{\frac{m\omega}{\hbar}}, \verb|        | p = \frac{P}{\sqrt{\hbar m \omega}},
+	\end{equation}
+	
+	\noindent siendo $X$ y $P$ la posici\'on y el momento de la part\'icula en unidades f\'isicas respectivamente, $m$ su masa y $\omega$ la frecuencia del oscilador. El t\'ermino $\kappa$ es la llamada \textit{fuerza de la patada adimensional}, $\eta$ es el par\'ametro de Lamb-Dicke, y $\tau_k$ el periodo en el que act\'ua la patada, cuyo potencial corresponde al tercer t\'ermino del hamiltoniano. $\hbar$ es la constante de Planck y $\delta$ es la delta de Dirac.
+	
+	Las trayectorias en el espacio de fase de este sistema corresponden a las del oscilador arm\'onico, mientras que durante el efecto de las patadas, cada tiempo $t = n\tau_k$, las part\'iculas cambian instant\'aneamente su momento pero mantienen la misma posici\'on, cambiando a otra trayectoria del oscilador arm\'onico de energ\'ia distinta.
+	
+	Sin embargo, al considerar el sistema acoplado a un reservorio t\'ermico ya no esposible encontrar las ecuaciones de movimiento mediante un hamiltoniano, debido al intercambio de energ\'ia del sistema con el reservorio. En su lugar, encontramos las trayectorias resolviendo la ecuaci\'on de Langevin, dada por: 
+	
+	\begin{equation}\label{LangevinOriginal}
+		\frac{d^2x}{dt^2} + \frac{\lambda}{m}\frac{dx}{dt} + \omega^2 x = \frac{1}{m}\eta_T,
+	\end{equation}
+	
+	\noindent donde $\gamma$ es el coeficiente de acoplamiento entre el sistema y el reservorio, y $\eta_T$ es una fuerza aleatoria que act\'ua sobre la part\'icula debido a la temperatura del entorno  con una distribuci\'on normal, provocando un movimiento browniano, dada por:
+	
+	\begin{equation}\label{EtaTemperatura}
+		\langle \eta_T(t)\eta_T(t') \rangle = 2\lambda k_B T_e\delta(t-t'),
+	\end{equation}
+	
+	\noindent donde $k_B$ es la constante de Boltzmann, $T_e$ es la temperatura del reservorio, y el t\'ermino $\delta(t-t')$ indica que la fuerza aleatoria se supone independiente para cada tiempo. 
+	
+	Al tomar las variables en (\ref{CambioVariables}), la ecuaci\'on de Langevin (\ref{LangevinOriginal}) queda escrita como:
+	
+	\begin{equation}\label{Langevin}
+		\frac{d^2x}{dt^2} + \frac{\lambda}{m}\frac{dx}{dt} + \omega^2 x = \sqrt{\frac{\omega}{m\hbar}} \eta_T.
+	\end{equation} 
+	
+	Durante el efecto de las patadas podemos despreciar el efecto del reservorio t\'ermico durante un intervalo de tiempo arbitrariamente pequeño, debido a que la fuerza es instat\'anea, por lo que el efecto de las patadas se puede encontrar a partir del hamiltoniano del sistema original de la ecuaci\'on (\ref{Hamiltoniano}).
+	
+	Consideramos una colecci\'on estad\'istica de trayectorias, de forma que en cada instante de tiempo $t$ estas nos dan una distribuci\'on de estados en el espacio de fase correspondiente a la funci\'on de distribuci\'on del sistema, que corresponde a una densidad de probabilidad de encontrar una parti\'icula en cierto lugar del espacio de fase, la cual se vuelve cuasi-estacionaria para tiempos suficientemente grandes. Esta funci\'on de distribuci\'on se compara con su equivalente cu\'antico.
+	
+	\section{Din\'amica con el reservorio a temperatura cero}
+	
+	El caso l\'imite del reservorio a temperatura cero se obtiene al tomar $\eta(t) = 0$ en la ecuaci\'on (\ref{EtaTemperatura}), por lo que las ecuaciones de movimiento corresponden a las del oscilador arm\'onico amortiguado y est\'an dadas por:
+	
+	\begin{eqnarray}
+		\frac{d^2x}{dt^2} + \frac{\lambda}{m}\frac{dx}{dt} + \omega^2 x & = & 0, \label{EcuacionesOsciladorArmonicoX}\\
+		p & = & \frac{dx}{dt},\label{EcuacionesOsciladorArmonicoP}
+	\end{eqnarray}
+	
+	\noindent mientras que el efecto de las patadas se obtiene al utilizar las ecuaciones de Hamilton para el momento $p$, ya que estas no afectan la posici\'on. Tomando el hamiltoniano del oscilador arm\'onico pateado (\ref{Hamiltoniano}) \'unicamente durante el efecto de las patadas obtenemos:
+	
+	\begin{equation}\label{EcuacionCambioP}
+		\dot{p} = -\hbar\omega x + \frac{\kappa}{\eta}\sqrt{\frac{\hbar}{m\omega}} \sin \left( \sqrt{\frac{2\hbar}{m\omega}}\eta x \right) \sum_{n\in\Re}\delta(t - n\tau_k).
+	\end{equation}
+	
+	Las ecuaciones diferenciales en (\ref{EcuacionesOsciladorArmonicoX}) y (\ref{EcuacionesOsciladorArmonicoP}) se pueden resolver de forma anal\'itica, y est\'an dadas por:
+	
+	\begin{eqnarray}
+		x(t) & = & e^{-\frac{\lambda}{2m}t}\left[ x_0\cos(\omega t) + (p_0 + \frac{1}{2}\lambda x_0)\sin(\omega t) \right] \\
+		p(t) & = & e^{-\frac{\lambda}{2m}t} \left[ p_0\cos(\omega t) - (x_0 + \lambda p_0 + \lambda^2x_0)\sin(\omega t) \right]
+	\end{eqnarray}
+	
+	\begin{thebibliography}{99}
+		
+		\bibitem{1991ProblemChaos} \fontsize{0.35cm}{0.5cm}\selectfont{Berman, G. P., Rubaev, V. Y., \& Zaslavsky, G. M. (1991). ``The problem of quantum chaos in a kicked harmonic oscillator. \textit{Nonlinearity}, 4(2), 543.}
+		
+		\bibitem{2019dynamics} \fontsize{0.35cm}{0.5cm}\selectfont{Tuwankotta, J. M., \& Ihsan, A. F. (2019). ``On the dynamics of a kicked harmonic oscillator'' \textit{International Journal of Dynamics and Control}, 7(3), 857-865}
+		
+		\bibitem{2008StabilityChaos} \fontsize{0.35cm}{0.5cm}\selectfont{Kells, G. A., Twamley, J., \& Heffernan, D. M. (2008) ``Stability analysis of the kicked harmonic oscillator's accelerator modes. \textit{Chaos, Solitons \& Fractals}, 36(3), 772-780}
+		
+		\bibitem{2012Experimental} \fontsize{0.35cm}{0.5cm}\selectfont{Lemos, G. B., Gomes, R., Walborn, S., Ribeiro, S. y Fabricio T., ``Experimental observation of quantum chaos in a beam of light''\textit{Nature Communications}, Vol. 3, No. 1, p. 01-07, 2012.}
+		
+		\bibitem{2017Prado} \fontsize{0.35cm}{0.5cm}\selectfont{Reynoso, M. P., Vázquez, P. L., \& Gorin, T. (2017). ``Quantum kicked harmonic oscillator in contact with a heat bath''. \textit{Physical Review A}, 95(2), 022118.}
+		
+		\bibitem{2004Transition} \fontsize{0.35cm}{0.5cm} \selectfont{Carvalho, A. R. R., de Matos Filho, R. L., \& Davidovich, L. (2004). ``Environmental effects in the quantum-classical transition for the delta-kicked harmonic oscillator''. \textit{Physical Review E}, 70(2), 026211.}
+		
+		\bibitem{2016Entanglement} \fontsize{0.35cm}{0.5cm} \selectfont{Arrais, E. G., Sales, J. S., \& de Almeida, N. G. (2016). ``Entanglement dynamics for a conditionally kicked harmonic oscillator''. \textit{Journal of Physics B: Atomic, Molecular and Optical Physics}, 49(16), 165501.
+		}	
+		
+		\bibitem{1998LangevinEquation} \fontsize{0.35cm}{0.5cm} \selectfont{Sekimoto, K. (1998). ``Langevin equation and thermodynamics''. \textit{Progress of Theoretical Physics Supplement}, 130, 17-27}
+		
+		
+		
+		
+		
+	
+		
+	\end{thebibliography}
+\end{document}
