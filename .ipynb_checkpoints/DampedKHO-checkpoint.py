@@ -29,8 +29,9 @@ class DampedKHO():
         self._omega = omega
         self._kbt_ext = kbt_ext
         self._q = q
-        self._tk = 2*np.pi / self._q
+        self._tk = (2*np.pi / self._q) / omega
         self._eta = eta_LD
+        self._coef = self._gamma / self._omega
         
         # In temp0 is True, we use the exact solution for the equations of
         # motion.
@@ -45,13 +46,13 @@ class DampedKHO():
 
         # The evolution of the phase space for the system (XP) and the
         # energy
-        self._xp_before = []
-        self._xp_after  = []
-        self._energy_before = []
-        self._energy_after = []
+        self.xp_before = []
+        self.xp_after  = []
+        self.energy_before = []
+        self.energy_after = []
 
         # Set the initial distribution for the Phase Space
-        self.set_xp_state(0, 1, 'normal')
+        self.set_xp_state(0, 0.5, 'normal')
         
     @property
     def omega(self):
@@ -60,10 +61,45 @@ class DampedKHO():
     @omega.setter
     def omega(self, value):
         self._omega = value
+        #self._coef = self._gamma / self._omega
+        self._tk = (2*np.pi / self._q) / self._omega
+        self._construct_Fa()
         
     @property
     def kappa(self):
         return self._kappa
+    
+    @kappa.setter
+    def kappa(self, value):
+        self._kappa = value
+        
+    @property
+    def gamma(self):
+        return self._gamma
+    
+    @gamma.setter
+    def gamma(self, value):
+        self._gamma = value
+        self._coef = self._gamma / self._omega
+        self._construct_Fa()
+    
+    @property
+    def coef(self):
+        return self._coef
+    
+    @coef.setter
+    def coef(self, value):
+        self._coef = value
+        self._construct_Fa()
+    
+    @property
+    def q(self):
+        return self._q
+    
+    @q.setter
+    def q(self, value):
+        self._q = value
+        self._tk = (2*np.pi / self.q ) / self._omega
     
     def set_xp_state(self, mean, s_deviation, distribution='normal'):
         """
@@ -96,8 +132,8 @@ class DampedKHO():
                                  [Fa_21, Fa_22]])
             
         else:
-            self._Fa = np.array([[0, 1], 
-                                 [-self._omega**2, -self._omega * self._gamma]])
+            self._Fa = np.array([[0, -1], 
+                                 [1, -self._coef]])
 
     def _damping(self):
         """
@@ -107,14 +143,14 @@ class DampedKHO():
         """
 
         npass = int(self._tk / self._dt)
-       
+        #self._construct_Fa()
 
         for ti in range(npass):
             # The random force (external Temperature)
-            eta = self._eta_random_force()
+            eta_T = self._eta_random_force()
             
             self._xp_state = self._xp_state + self._dt * np.dot(self._xp_state, self._Fa) +\
-                             np.sqrt(2*self._gamma*self._kbt_ext * self._omega) * eta
+                             eta_T
 
     def _eta_random_force(self):
         """
@@ -124,9 +160,11 @@ class DampedKHO():
         
         eta = np.array(
                 [np.zeros(self._nparticles),
-                normal(0, np.sqrt(self._dt), self._nparticles)]
-            )
+                #normal(mean, standard_deviation, size)
+                normal(0, 1, self._nparticles)])
         eta = eta.transpose()
+        
+        eta = np.sqrt(2 * self._coef * (self._kbt_ext / self._omega) * self._dt) * eta
 
         return eta
             
@@ -153,7 +191,7 @@ class DampedKHO():
              np.sin(np.sqrt(2 / self._omega) * self._xp_state[:, 0])]
             )
         kick = kick.transpose()
-        self._xp_state = self._xp_state + c*kick
+        self._xp_state = self._xp_state + c * kick
 
     def actual_energy(self):
         """
@@ -180,12 +218,12 @@ class DampedKHO():
                 self._damping_temp0()
             else:
                 self._damping()
-            self._xp_before.append(self._xp_state.copy())
-            self._energy_before.append(self.actual_energy())
+            self.xp_before.append(self._xp_state.copy())
+            self.energy_before.append(self.actual_energy())
 
             self._kick()
-            self._xp_after.append(self._xp_state.copy())
-            self._energy_after.append(self.actual_energy())
+            self.xp_after.append(self._xp_state.copy())
+            self.energy_after.append(self.actual_energy())
 
     def make_n_kicks(self, nkicks, first_damping=True):
         """
@@ -203,7 +241,22 @@ class DampedKHO():
         """
             Return the energy evolution of the system.
         """
-        return self._energy_before.copy(), self._energy_after.copy()
+        energy = [None] * (2*len(self.energy_before))
+        energy[::2] = self.energy_before
+        energy[1::2] = self.energy_after
+        return energy
+        #return self.energy_before.copy(), self.energy_after.copy()
+    
+    def last_mean_energy(self):
+        """
+            Return the mean energy of the system during the last damping.
+        """
+        energy_before = self.energy_before[-1]
+        energy_after = self.energy_after[-1]
+        
+        mean_energy = (energy_before + energy_after) / 2
+        
+        return mean_energy
     
     def get_phase_space_evolution(self):
-        return self._xp_before, self._xp_after
+        return self.xp_before, self.xp_after
