@@ -5,14 +5,16 @@
 \contentsline {section}{\numberline {2.2}Termodin\'amica}{5}
 \contentsline {section}{\numberline {2.3}Colectividad can\'onica}{6}
 \contentsline {chapter}{\numberline {3}Marco te\'orico}{8}
-\contentsline {section}{\numberline {3.1}Din\'amica en el espacio de fase}{8}
-\contentsline {subsection}{\numberline {3.1.1}Soluci\'on a la ecuaci\'on de Langevin}{10}
-\contentsline {subsection}{\numberline {3.1.2}Efecto de las patadas}{11}
-\contentsline {subsection}{\numberline {3.1.3}Din\'amica del sistema}{11}
-\contentsline {section}{\numberline {3.2}Interpretaci\'on termodin\'amica}{12}
-\contentsline {section}{\numberline {3.3}Funci\'on de distribuci\'on del sistema}{15}
-\contentsline {chapter}{\numberline {4}Resultados}{17}
-\contentsline {section}{\numberline {4.1}Espacio de fase del sistema}{17}
-\contentsline {section}{\numberline {4.2}Funci\'on de distribuci\'on del sistema}{18}
-\contentsline {section}{\numberline {4.3}Coeficientes de Fourier}{24}
-\contentsline {section}{\numberline {4.4}Comparaci\IeC {\'o}n con la distribuci\IeC {\'o}n de Boltzmann}{27}
+\contentsline {section}{\numberline {3.1}Din\'amica en el espacio de fase}{9}
+\contentsline {subsection}{\numberline {3.1.1}Soluci\'on a la ecuaci\'on de Langevin}{11}
+\contentsline {subsection}{\numberline {3.1.2}Efecto de las patadas}{12}
+\contentsline {subsection}{\numberline {3.1.3}Din\'amica del sistema}{12}
+\contentsline {section}{\numberline {3.2}Interpretaci\'on termodin\'amica}{13}
+\contentsline {section}{\numberline {3.3}Funci\'on de distribuci\'on del sistema}{16}
+\contentsline {chapter}{\numberline {4}Resultados}{18}
+\contentsline {section}{\numberline {4.1}Espacio de fase del sistema}{18}
+\contentsline {section}{\numberline {4.2}Funci\'on de distribuci\'on del sistema}{19}
+\contentsline {section}{\numberline {4.3}Coeficientes de Fourier}{25}
+\contentsline {section}{\numberline {4.4}Comparaci\IeC {\'o}n con la distribuci\IeC {\'o}n de Boltzmann}{28}
+\contentsline {section}{\numberline {4.5}Ciclos termodin\'amicos}{30}
+\contentsline {chapter}{\numberline {5}Conclusi\'on}{31}

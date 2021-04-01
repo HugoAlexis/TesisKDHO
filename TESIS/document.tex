@@ -225,13 +225,13 @@
 	La funci\'on de distribuci\'on del sistema, que nos da la probabilidad de encontrar a una part\'icula de este en el estado $(\vec{p},\vec{q})$ del espacio de fase, donde $\vec{p}$ y $\vec{q}$  son las posiciones y los momentos generalizados del sistema, respectivamente, est\'a dada por:
 	
 	\begin{equation}
-		\rho = \frac{1}{\Omega(T, \vec{X})} e^{\frac{H(\vec{p}, \vec{q})}{k_B T}},
+		\rho = \frac{1}{\Omega(T, \vec{X})} e^{-\frac{H(\vec{p}, \vec{q})}{k_B T}},
 	\end{equation}
 	
 	\noindent donde $H(\vec{p}, \vec{q})$ es el hamiltoniano del sistema y  $k_B$ es la constante de Boltzmann. La funci\'on $\Omega(T, \vec{X})$ es la constante de normalizaci\'on de la funci\'on de distribuci\'on llamada funci\'on de partici\'on de la colectividad can\'onica, que depende de la temperatura del reservorio T y las las variables mec\'anicas del sistema, y est\'a dada por
 	
 	\begin{equation}
-		\Omega(T, \vec{X}) = \int \frac{dp_1 dp_2 ... dq_1 dq_2...}{h^NN!} e^{\beta H(\vec{p}, \vec{q})}, 
+		\Omega(T, \vec{X}) = \int \frac{dp_1 dp_2 ... dq_1 dq_2...}{h^NN!} e^{-\beta H(\vec{p}, \vec{q})}, 
 	\end{equation}
 	
 	\noindent donde N es el n\'umero de part\'iculas que componen al sistema termodin\'amico y $\beta = \frac{1}{k_BT}$.
@@ -242,48 +242,67 @@
 		\item Energ\'ia interna
 		
 		\begin{equation}
-			U = -\frac{\partial}{\partial \beta} ln\Omega(T, \vec(X)).
+			U = -\frac{\partial}{\partial \beta} \ln\Omega(T, \vec(X)).
 		\end{equation}
 		
 		\item Diferencial de trabajo
 		
 		\begin{equation}
-			\delta W = \frac{1}{\beta}\sum_{\alpha=1}^K\frac{\partial}{\partial X_{\alpha}}ln\Omega(T, \vec{X})dX_\alpha.
+			\delta W = \frac{1}{\beta}\sum_{\alpha=1}^K\frac{\partial}{\partial X_{\alpha}}\ln\Omega(T, \vec{X})dX_\alpha.
 		\end{equation}
 		
 		\item Entrop\'ia
 		
 		\begin{equation}
-			S = \frac{U}{T} + k_Bln\Omega(T, \vec{X})
+			S = \frac{U}{T} + k_B\ln\Omega(T, \vec{X})
 		\end{equation}
 	\end{itemize}	
 	
 	%\section{El oscilador arm\'onico pateado}
 	
+	
+	
+	
+	
+	
 	\chapter{Marco te\'orico}
 	
-	El oscilador arm\'onico pateado es un sistema f\'isico cuya din\'amica est\'a descrita por el Hamiltoniano siguiente:
+	El oscilador arm\'onico pateado, descrito en \cite{GardinerDeltaKicked, PradoTesis}, es un sistema f\'isico que consiste de un \'atomo de dos niveles (o un conjunto de \'atomos sin interacci\'on) cuya din\'amica es la del oscilador arm\'onico, con interacciones peri\'odicas e instant\'aneas (llamadas patadas) generadas con un l\'aser. El movimiento del sistema para una part\'icula de masa $m$ en un oscilador con frecuencia $\omega$ puede ser descrito por el Hamiltoniano
 	
-	\begin{equation}\label{Hamiltoniano}
-		H = \omega \hbar \left[ \frac{p^2}{2} + \frac{x^2}{2} \right] + \frac{\kappa}{\sqrt{2}\eta^2} \cos \left( \sqrt{\frac{2\hbar}{m\omega}}\eta x  \right) \sum_{n\in\Re}\delta(t/\omega - n\tau_k),
+	\begin{equation}
+		H = \frac{P^2}{2m} + \frac{M\omega^2x^2}{2} + \frac{\hbar\Omega t_p}{8\Delta}\cos(kX)\sum_{n=-\infty}^{\infty}\delta(t-nT_k)
 	\end{equation}
 	
-	\noindent donde se han tomado los par\'ametros para la posici\'on, el momento y el tiempo como 
+	\noindent donde $P$ es el momento de la part\'icula y $X$ su posici\'on medida desde el punto de menor potencial del oscilador arm\'onico, medidas en unidades f\'isicas. $\hbar$ es la constante reducida de Plank y t es el tiempo. Las patadas son pulsos realizados cada periodo $T_k$ y tienen una duraci\'on $t_p$ realizadas con un l\'aser de ondas estacionarias. Respecto al l\'aser de ondas estacionarias, $\Delta$ denota la transici\'on de los dos niveles, $\Omega$ es la frecuancia de Rab\'i, y $k=4\pi / \lambda_L$ es su longitud de onda.
+	
+	 Tomando los par\'ametros adimensionales para la posici\'on, el momento y el tiempo siguientes:
 	
 	\begin{equation}\label{CambioVariables}
 		x = \sqrt{\frac{m\omega}{\hbar}}X, \verb|    | p = \frac{P}{\sqrt{\hbar m \omega}}, \verb|    | \tau = \omega t,
 	\end{equation}
 	
-	\noindent siendo $X$ y $P$ la posici\'on y el momento de la part\'icula en unidades f\'isicas respectivamente, $m$ su masa y $\omega$ la frecuencia del oscilador. El t\'ermino $\kappa$ es la llamada \textit{fuerza de la patada adimensional}, $\eta$ es el par\'ametro de Lamb-Dicke, y $\tau_k$ el periodo en el que act\'ua la patada, cuyo potencial corresponde al tercer t\'ermino del hamiltoniano. $\hbar$ es la constante de Planck y $\delta$ es la delta de Dirac.
+	\noindent se puede escribir el Hamiltoniano del sistema como:
+	
+	\begin{equation}\label{Hamiltoniano}
+	H = \omega \hbar \left[ \frac{p^2}{2} + \frac{x^2}{2} \right] + \frac{\kappa}{\sqrt{2}\eta_{\rm LD}^2} \cos \left( \sqrt{2}\eta_{\rm LD} x  \right) \omega\sum_{n\in\mathbb{N}}\delta(\tau - 2\pi\frac{n}{q}).
+	\end{equation}
+	
+	El t\'ermino $\kappa = \hbar\Omega t_p / (8\sqrt{2}m\omega_o\Delta) $ es la llamada \textit{fuerza de la patada adimensional} y $\eta_{\rm LD} = k\sqrt{\hbar/(2m\omega_o)}$ es el par\'ametro de Lamb-Dicke. Aqu\'i, se ha introducido adem\'as el par\'ametro $q$, que es la relaci\'on entre el periodo fundamental del oscilador arm\'onico $2\pi/\omega$  y el periodo de la patada:
+	
+	\begin{equation}
+		q = \frac{2\pi}{\omega T_k}.
+	\end{equation}
+	
+	Por lo tanto el periodo de las patadas es $\tau_k = 2\pi/q$, en unidades adimensionales de $\tau$.
 	
 	\section{Din\'amica en el espacio de fase}
 	
 	Las trayectorias en el espacio de fase de este sistema corresponden a las del oscilador arm\'onico, mientras que durante el efecto de las patadas, cada tiempo $t = n\tau_k$, las part\'iculas cambian instant\'aneamente su momento pero mantienen la misma posici\'on, cambiando a otra trayectoria del oscilador arm\'onico de energ\'ia distinta.
 	
-	Sin embargo, al considerar el sistema acoplado a un reservorio t\'ermico ya no esposible encontrar las ecuaciones de movimiento mediante un hamiltoniano, debido al intercambio de energ\'ia del sistema con el reservorio. En su lugar, encontramos las trayectorias resolviendo la ecuaci\'on de Langevin, dada por: 
+	Sin embargo, al considerar el sistema acoplado a un reservorio t\'ermico ya no esposible encontrar las ecuaciones de movimiento mediante un hamiltoniano, debido al intercambio de energ\'ia del sistema con el reservorio. En su lugar, encontramos las trayectorias resolviendo la ecuaci\'on de Langevin dada por: 
 	
 	\begin{equation}\label{LangevinOriginal}
-		\frac{d^2x}{dt^2} + \frac{\gamma}{m}\frac{dx}{dt} + \omega^2 x = \frac{1}{m}\eta_T,
+		\frac{d^2X}{dt^2} + \frac{\gamma}{m}\frac{dX}{dt} + \omega^2 X = \frac{1}{m}\eta_T,
 	\end{equation}
 	
 	\noindent donde $\gamma$ es el coeficiente de acoplamiento entre el sistema y el reservorio, y $\eta_T$ es una fuerza aleatoria que act\'ua sobre la part\'icula debido a la temperatura del entorno  con una distribuci\'on normal, provocando un movimiento browniano, dada por:
@@ -292,9 +311,29 @@
 		\langle \eta_T(t)\eta_T(t') \rangle = 2\gamma k_B T_e\delta(t-t'),
 	\end{equation}
 	
-	\noindent donde $k_B$ es la constante de Boltzmann, $T_e$ es la temperatura del reservorio, y el t\'ermino $\delta(t-t')$ indica que la fuerza aleatoria se supone independiente para cada tiempo. 
+	\noindent donde $k_B$ es la constante de Boltzmann, $T_e$ es la temperatura del reservorio, y el t\'ermino $\delta(t-t')$ indica que la fuerza aleatoria se supone independiente para cada tiempo.
 	
-	Al tomar las variables en (\ref{CambioVariables}), la ecuaci\'on de Langevin (\ref{LangevinOriginal}) queda escrita como:
+	Utilizando los par\'ametros adimensionales $x$ y $p$ dados en la ecuaci\'on (\ref{CambioVariables}), se obtine la ecuaci\'on siguiente:
+	
+	\begin{equation}
+		\frac{d^2x}{dt^2} +  \frac{\gamma}{m}\frac{dx}{dt} + \omega^2x = \frac{1}{m} \sqrt{\frac{\hbar}{m\omega}} \eta_T.
+	\end{equation} 
+	
+	Tomando ahora el par\'ametro para el tiempo $\tau=\omega t$, obtenemos la siguiente derivada:
+	
+	\begin{equation}
+		\frac{dx}{d\tau} = \frac{dx}{dt}\frac{dt}{d\tau}
+		= \frac{1}{\omega}\frac{dx}{dt}
+	\end{equation}
+	
+	\noindent y su seguinda derivada:
+	
+	\begin{eqnarray}
+	\frac{dx}{dt} & = & \omega\frac{dx}{d\tau} \nonumber\\ 
+	\frac{dx^2}{dt^2} & = & \omega^2\frac{d^2 x}{d\tau^2}.
+	\end{eqnarray}
+	
+	Por lo que la ecuaci\'on de Langevin (\ref{LangevinOriginal}) queda escrita como:
 	
 	\begin{equation}\label{Langevin}
 		\frac{d^2x}{d\tau^2} + \frac{\gamma}{m\omega}\frac{dx}{d\tau} + x = \frac{1}{\omega}\sqrt{\frac{1}{m\omega\hbar}}\eta_T.
@@ -341,7 +380,7 @@
 		\eta_T^2x_j^2\Delta t = 2\gamma k_B T.
 	\end{equation}
 	
-	Por lo tanto, el t\'ermino de la patada aleatoria es
+	Por lo tanto, el t\'ermino de la patada aleatoria es\'a dado por
 	
 	\begin{equation}\label{EtaTemperaturaCalculado}
 		\eta_T^2 = \frac{2\gamma k_BT}{\Delta \tau}.
@@ -377,19 +416,25 @@
 	Durante el efecto de las patadas podemos despreciar la temperatura del entorno debido a que esta fuerza es instant\'anea, por lo que utilizamos el hamiltoniano del oscilador arm\'onico pateado dado por la ecuaci\'on (\ref{Hamiltoniano}). Utilizando las ecuaciones de Hamilton para el momento, obtenemos:
 	
 	\begin{equation}
-		\dot{p} = -\hbar\omega x + \frac{\kappa}{\eta}\sqrt{\frac{\hbar}{m\omega}}\sin \left[ \sqrt{\frac{2\hbar}{m\omega_k}} \eta x\right] \sum_n\delta(t-n\tau_k).
+		\dot{p} = -\hbar\omega x + \frac{\omega\kappa}{\eta_{\rm LD}}\sin \left( \sqrt{2} \eta_{\rm LD} x\right) \sum_n\delta(t-n\tau_k).
 	\end{equation}
 	
-	Resolvemos esta ecuaci\'on durante el intervalo de tiempo $t=n\tau_k - \epsilon$ a $t=n\tau_k + \epsilon$ con $\epsilon$ arbitrariamente pequeño y tomamos el l\'imite $\epsilon \rightarrow 0$, con lo que obtenemos el cambio de la n-\'esima patada:
+	El cambio debido a la n-\'esima est\'a dada por
 	
 	\begin{equation}
-		\Delta p = \frac{\kappa}{\eta}\sqrt{\frac{\hbar}{m\omega}} \sin \left(\sqrt{\frac{2\hbar}{m\omega}} \eta x \right).
+		\Delta p = \lim_{\epsilon \rightarrow 0} \int_{n\tau_k-\epsilon}^{n\tau_k+\epsilon} \left[-\hbar\omega x + \frac{\omega\kappa}{\eta_{\rm LD}}\sin (\sqrt{2} \eta_{\rm LD} x) \sum_n\delta(t-n\tau_k) \right]d\tau,
+	\end{equation}
+	
+	\noindent con lo que obtenemos:
+	
+	\begin{equation}
+		\Delta p = \frac{\omega\kappa}{\eta_{\rm LD}} \sin \left(\sqrt{2} \eta_{\rm LD} x \right).
 	\end{equation}
 	
 	Por lo tanto,  el estado justo despu\'es de la patada es
 	
 	\begin{equation}\label{EfectoPatada}
-		(x_n,\verb|  | p_n) = (x_n^{'}, \verb|  | p_n^{'} +  \frac{\kappa}{\eta}\sqrt{\frac{\hbar}{m\omega}} \sin \left(\sqrt{\frac{2\hbar}{m\omega}} \eta x \right),
+		(x_n,\verb|  | p_n) = (x_n^{'}, \verb|  | p_n^{'} +  \frac{\kappa}{\eta_{\rm LD}} \sin \left(\sqrt{2} \eta_{\rm LD} x \right),
 	\end{equation}
 	
 	\noindent donde $x_n^{'}$ y $p_n^{'}$ son la posici\'on y el momento de la part\'icula justo antes de la n-\'esima patada.
@@ -398,7 +443,7 @@
 	
 	La figura \ref{fig.Temp0vsTempFinita} mestra una trayectoria en el espacio de fase del oscilador arm\'onico pateado, con el reservorio a temperatura cero y con el reservorio a temperatura finita, $k_BT_e = 5$.
 	
-	\begin{figure} 
+	\begin{figure} [h!]
 		\centering 
 		\begin{minipage}{0.45\textwidth}
 			\centering 
@@ -436,7 +481,7 @@
 	A partir del mapa del espacio de fase obtenido anteriormente, podemos encontrar la energía promedio de las partículas mediante el promedio de la energía cinética y potencial de cada una de ellas en la n-ésima patada,
 	
 	\begin{equation}
-	\langle E(n) \rangle = \frac{1}{N}\sum_{j=1}^{N} \omega(\frac{p_j^2}{2} + \frac{q_j^2}{2}),
+	\langle E(n) \rangle = \frac{\hbar\omega_o}{N}\sum_{j=1}^{N} (\frac{p_j^2}{2} + \frac{q_j^2}{2}),
 	\end{equation}
 	
 	\noindent donde $p_j$ y $q_j$ son las coordenadas de posición y el momento de cada partícula.
@@ -542,13 +587,13 @@
 	\noindent donde $H(x,p)$ es el hamiltoniano del sistema y $A$ es la constante de normalización \cite{CursoFisEstadistica}. Para este sistema, consideramos el hamiltoniano del oscilador arm\'onico, 
 	
 	\begin{equation}
-	H(x,p) = \frac{1}{2}\omega(p^2 + q^2),
+	H(x,p) = \frac{1}{2}\omega\hbar(p^2 + q^2),
 	\end{equation}
 	
 	\noindent mientras que $k_BT = \langle E \rangle$ es la energía promedio del sistema. Por lo tanto, la distribución de Boltzmann para el sistema es:
 	
 	\begin{equation}
-	P_B(x,p) = Ae^{\frac{\omega(p^2+q^2)}{2\langle E \rangle }}.
+	P_B(x,p) = Ae^{\frac{\omega\hbar(p^2+q^2)}{2\langle E \rangle }}.
 	\end{equation}
 	
 	Consideramos el error de la distribución del sistema obtenida como el porcentaje de diferencia con la distribución de Boltzmann, de manera que un $0\%$ indica que las distribuciones son completamente iguales, y un $100\%$ que son completamente distintas:
@@ -893,6 +938,9 @@ La tabla \ref{tab:ErroresPorcentaje} muestra el porcentaje del error absoluto en
 	
 \end{table} 
 
+	\section{Ciclos termodin\'amicos}
+	
+	\chapter{Conclusi\'on}
 	
 	\begin{thebibliography}{99}
 		
@@ -903,6 +951,8 @@ La tabla \ref{tab:ErroresPorcentaje} muestra el porcentaje del error absoluto en
 		\bibitem{2008StabilityChaos} \fontsize{0.35cm}{0.5cm}\selectfont{Kells, G. A., Twamley, J., \& Heffernan, D. M. (2008) ``Stability analysis of the kicked harmonic oscillator's accelerator modes. \textit{Chaos, Solitons \& Fractals}, 36(3), 772-780}
 		
 		\bibitem{2012Experimental} \fontsize{0.35cm}{0.5cm}\selectfont{Lemos, G. B., Gomes, R., Walborn, S., Ribeiro, S. y Fabricio T., ``Experimental observation of quantum chaos in a beam of light''\textit{Nature Communications}, Vol. 3, No. 1, p. 01-07, 2012.}
+		
+		\bibitem{GardinerDeltaKicked} \fontsize{0.35cm}{0.5cm}\selectfont{Gardiner, S. A., Cirac, J. I., \& Zoller, P. (1997), ``The delta-kicked harmonic oscillator. \emph{Physical Review Letters}, 79(24), 4790-4793.}
 		
 		\bibitem{2017Prado} \fontsize{0.35cm}{0.5cm}\selectfont{Reynoso, M. P., Vázquez, P. L., \& Gorin, T. (2017). ``Quantum kicked harmonic oscillator in contact with a heat bath''. \textit{Physical Review A}, 95(2), 022118.}
 		
