@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.3.15)  1 APR 2021 16:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.3.15)  2 APR 2021 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -736,20 +736,20 @@ Cap\'{\i }tulo 3.
 <Figures/noT.jpeg, id=77, 462.528pt x 346.896pt>
 File: Figures/noT.jpeg Graphic file (type jpg)
 <use Figures/noT.jpeg>
-Package pdftex.def Info: Figures/noT.jpeg  used on input line 450.
+Package pdftex.def Info: Figures/noT.jpeg  used on input line 463.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
 
-Overfull \hbox (8.8076pt too wide) in paragraph at lines 450--451
+Overfull \hbox (8.8076pt too wide) in paragraph at lines 463--464
  [][] 
  []
 
 <Figures/10T.png, id=78, 462.528pt x 346.896pt>
 File: Figures/10T.png Graphic file (type png)
 <use Figures/10T.png>
-Package pdftex.def Info: Figures/10T.png  used on input line 454.
+Package pdftex.def Info: Figures/10T.png  used on input line 467.
 (pdftex.def)             Requested size: 227.62204pt x 170.71628pt.
 
-Overfull \hbox (8.8076pt too wide) in paragraph at lines 454--455
+Overfull \hbox (8.8076pt too wide) in paragraph at lines 467--468
  [][] 
  []
 
@@ -760,20 +760,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figures/Eta05.png, id=84, 462.528pt x 346.896pt>
 File: Figures/Eta05.png Graphic file (type png)
 <use Figures/Eta05.png>
-Package pdftex.def Info: Figures/Eta05.png  used on input line 469.
+Package pdftex.def Info: Figures/Eta05.png  used on input line 482.
 (pdftex.def)             Requested size: 199.17252pt x 142.26532pt.
 
-Overfull \hbox (28.97939pt too wide) in paragraph at lines 469--470
+Overfull \hbox (28.97939pt too wide) in paragraph at lines 482--483
  [][] 
  []
 
 <Figures/Eta20.png, id=85, 462.528pt x 346.896pt>
 File: Figures/Eta20.png Graphic file (type png)
 <use Figures/Eta20.png>
-Package pdftex.def Info: Figures/Eta20.png  used on input line 473.
+Package pdftex.def Info: Figures/Eta20.png  used on input line 486.
 (pdftex.def)             Requested size: 199.17252pt x 142.26532pt.
 
-Overfull \hbox (28.97939pt too wide) in paragraph at lines 473--474
+Overfull \hbox (28.97939pt too wide) in paragraph at lines 486--487
  [][] 
  []
 
@@ -783,90 +783,90 @@ Cap\'{\i }tulo 4.
 <FigsJPG/PhaseSpace_a.jpeg, id=105, 693.792pt x 445.9059pt>
 File: FigsJPG/PhaseSpace_a.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_a.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_a.jpeg  used on input line 627.
+Package pdftex.def Info: FigsJPG/PhaseSpace_a.jpeg  used on input line 640.
 (pdftex.def)             Requested size: 170.71628pt x 128.03705pt.
 
-Overfull \hbox (15.11029pt too wide) in paragraph at lines 627--628
+Overfull \hbox (15.11029pt too wide) in paragraph at lines 640--641
 [][] 
  []
 
 <FigsJPG/PhaseSpace_b.jpeg, id=106, 654.0435pt x 431.4519pt>
 File: FigsJPG/PhaseSpace_b.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_b.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_b.jpeg  used on input line 630.
+Package pdftex.def Info: FigsJPG/PhaseSpace_b.jpeg  used on input line 643.
 (pdftex.def)             Requested size: 170.71594pt x 128.04088pt.
 
-Overfull \hbox (15.10995pt too wide) in paragraph at lines 630--631
+Overfull \hbox (15.10995pt too wide) in paragraph at lines 643--644
 [][] 
  []
 
 <FigsJPG/PhaseSpace_c.jpeg, id=107, 642.4803pt x 456.7464pt>
 File: FigsJPG/PhaseSpace_c.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_c.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_c.jpeg  used on input line 633.
+Package pdftex.def Info: FigsJPG/PhaseSpace_c.jpeg  used on input line 646.
 (pdftex.def)             Requested size: 170.71722pt x 128.03447pt.
 
-Overfull \hbox (15.11124pt too wide) in paragraph at lines 633--634
+Overfull \hbox (15.11124pt too wide) in paragraph at lines 646--647
 [][] 
  []
 
 <FigsJPG/PhaseSpace_dd.jpeg, id=108, 740.7675pt x 458.9145pt>
 File: FigsJPG/PhaseSpace_dd.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_dd.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_dd.jpeg  used on input line 638.
+Package pdftex.def Info: FigsJPG/PhaseSpace_dd.jpeg  used on input line 651.
 (pdftex.def)             Requested size: 170.71204pt x 128.03302pt.
 
-Overfull \hbox (15.10605pt too wide) in paragraph at lines 638--639
+Overfull \hbox (15.10605pt too wide) in paragraph at lines 651--652
 [][] 
  []
 
 <FigsJPG/PhaseSpace_ee.jpeg, id=109, 710.4141pt x 458.9145pt>
 File: FigsJPG/PhaseSpace_ee.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_ee.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_ee.jpeg  used on input line 641.
+Package pdftex.def Info: FigsJPG/PhaseSpace_ee.jpeg  used on input line 654.
 (pdftex.def)             Requested size: 170.70882pt x 128.03302pt.
 
-Overfull \hbox (15.10283pt too wide) in paragraph at lines 641--642
+Overfull \hbox (15.10283pt too wide) in paragraph at lines 654--655
 [][] 
  []
 
 <FigsJPG/PhaseSpace_ff.jpeg, id=110, 705.3552pt x 460.3599pt>
 File: FigsJPG/PhaseSpace_ff.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_ff.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_ff.jpeg  used on input line 644.
+Package pdftex.def Info: FigsJPG/PhaseSpace_ff.jpeg  used on input line 657.
 (pdftex.def)             Requested size: 170.7094pt x 128.03587pt.
 
-Overfull \hbox (15.10341pt too wide) in paragraph at lines 644--645
+Overfull \hbox (15.10341pt too wide) in paragraph at lines 657--658
 [][] 
  []
 
 <FigsJPG/PhaseSpace_g.jpeg, id=111, 737.8767pt x 459.6372pt>
 File: FigsJPG/PhaseSpace_g.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_g.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_g.jpeg  used on input line 649.
+Package pdftex.def Info: FigsJPG/PhaseSpace_g.jpeg  used on input line 662.
 (pdftex.def)             Requested size: 170.71013pt x 128.03827pt.
 
-Overfull \hbox (15.10414pt too wide) in paragraph at lines 649--650
+Overfull \hbox (15.10414pt too wide) in paragraph at lines 662--663
 [][] 
  []
 
 <FigsJPG/PhaseSpace_h.jpeg, id=112, 672.111pt x 456.7464pt>
 File: FigsJPG/PhaseSpace_h.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_h.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_h.jpeg  used on input line 652.
+Package pdftex.def Info: FigsJPG/PhaseSpace_h.jpeg  used on input line 665.
 (pdftex.def)             Requested size: 170.7143pt x 128.03447pt.
 
-Overfull \hbox (15.1083pt too wide) in paragraph at lines 652--653
+Overfull \hbox (15.1083pt too wide) in paragraph at lines 665--666
 [][] 
  []
 
 <FigsJPG/PhaseSpace_i.jpeg, id=113, 645.3711pt x 455.301pt>
 File: FigsJPG/PhaseSpace_i.jpeg Graphic file (type jpg)
 <use FigsJPG/PhaseSpace_i.jpeg>
-Package pdftex.def Info: FigsJPG/PhaseSpace_i.jpeg  used on input line 655.
+Package pdftex.def Info: FigsJPG/PhaseSpace_i.jpeg  used on input line 668.
 (pdftex.def)             Requested size: 170.71725pt x 128.03224pt.
 
-Overfull \hbox (15.11127pt too wide) in paragraph at lines 655--656
+Overfull \hbox (15.11127pt too wide) in paragraph at lines 668--669
 [][] 
  []
 
@@ -882,26 +882,26 @@ ace_h.jpeg> <./FigsJPG/PhaseSpace_i.jpeg>]
 <last_figures/dist_functions.jpg, id=121, 867.24pt x 1084.05pt>
 File: last_figures/dist_functions.jpg Graphic file (type jpg)
 <use last_figures/dist_functions.jpg>
-Package pdftex.def Info: last_figures/dist_functions.jpg  used on input line 67
-9.
+Package pdftex.def Info: last_figures/dist_functions.jpg  used on input line 69
+2.
 (pdftex.def)             Requested size: 413.32193pt x 516.6494pt.
  [20 <./last_figures/dist_functions.jpg>]
 <FigsJPG/frecuencias_wk.jpg, id=125, 722.7pt x 505.89pt>
 File: FigsJPG/frecuencias_wk.jpg Graphic file (type jpg)
 <use FigsJPG/frecuencias_wk.jpg>
-Package pdftex.def Info: FigsJPG/frecuencias_wk.jpg  used on input line 692.
+Package pdftex.def Info: FigsJPG/frecuencias_wk.jpg  used on input line 705.
 (pdftex.def)             Requested size: 340.37885pt x 238.26236pt.
 <FigsJPG/dist_function_eta_1-00.jpg, id=126, 1084.05pt x 505.89pt>
 File: FigsJPG/dist_function_eta_1-00.jpg Graphic file (type jpg)
 <use FigsJPG/dist_function_eta_1-00.jpg>
 Package pdftex.def Info: FigsJPG/dist_function_eta_1-00.jpg  used on input line
- 700.
+ 713.
 (pdftex.def)             Requested size: 437.62888pt x 204.22818pt.
 <FigsJPG/dist_function_eta_0-25.jpg, id=127, 1084.05pt x 505.89pt>
 File: FigsJPG/dist_function_eta_0-25.jpg Graphic file (type jpg)
 <use FigsJPG/dist_function_eta_0-25.jpg>
 Package pdftex.def Info: FigsJPG/dist_function_eta_0-25.jpg  used on input line
- 703.
+ 716.
 (pdftex.def)             Requested size: 437.62888pt x 204.22818pt.
 
 
@@ -911,52 +911,52 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figs/CalorMapk45T0.pdf, id=131, 984.31741pt x 404.712pt>
 File: Figs/CalorMapk45T0.pdf Graphic file (type pdf)
 <use Figs/CalorMapk45T0.pdf>
-Package pdftex.def Info: Figs/CalorMapk45T0.pdf  used on input line 719.
+Package pdftex.def Info: Figs/CalorMapk45T0.pdf  used on input line 732.
 (pdftex.def)             Requested size: 458.08954pt x 188.34352pt.
 
-Overfull \hbox (20.46066pt too wide) in paragraph at lines 719--721
+Overfull \hbox (20.46066pt too wide) in paragraph at lines 732--734
  [][] 
  []
 
 <Figures/WignerFunctions1.jpeg, id=132, 371.3875pt x 404.51125pt>
 File: Figures/WignerFunctions1.jpeg Graphic file (type jpg)
 <use Figures/WignerFunctions1.jpeg>
-Package pdftex.def Info: Figures/WignerFunctions1.jpeg  used on input line 725.
+Package pdftex.def Info: Figures/WignerFunctions1.jpeg  used on input line 738.
 
 (pdftex.def)             Requested size: 170.71652pt x 185.9478pt.
 <Figures/WignerFunctions2.jpeg, id=133, 504.88625pt x 403.5075pt>
 File: Figures/WignerFunctions2.jpeg Graphic file (type jpg)
 <use Figures/WignerFunctions2.jpeg>
-Package pdftex.def Info: Figures/WignerFunctions2.jpeg  used on input line 732.
+Package pdftex.def Info: Figures/WignerFunctions2.jpeg  used on input line 745.
 
 (pdftex.def)             Requested size: 227.33766pt x 181.68752pt.
 
-Overfull \hbox (11.13431pt too wide) in paragraph at lines 731--733
+Overfull \hbox (11.13431pt too wide) in paragraph at lines 744--746
 []  [] 
  []
 
 <Figs/CalorMapk45T5.pdf, id=134, 898.31612pt x 417.7206pt>
 File: Figs/CalorMapk45T5.pdf Graphic file (type pdf)
 <use Figs/CalorMapk45T5.pdf>
-Package pdftex.def Info: Figs/CalorMapk45T5.pdf  used on input line 750.
+Package pdftex.def Info: Figs/CalorMapk45T5.pdf  used on input line 763.
 (pdftex.def)             Requested size: 412.56496pt x 191.84148pt.
 
-Overfull \hbox (23.55739pt too wide) in paragraph at lines 750--752
+Overfull \hbox (23.55739pt too wide) in paragraph at lines 763--765
  [][] 
  []
 
 File: Figures/WignerFunctions1.jpeg Graphic file (type jpg)
 <use Figures/WignerFunctions1.jpeg>
-Package pdftex.def Info: Figures/WignerFunctions1.jpeg  used on input line 757.
+Package pdftex.def Info: Figures/WignerFunctions1.jpeg  used on input line 770.
 
 (pdftex.def)             Requested size: 152.22241pt x 165.8013pt.
 File: Figures/WignerFunctions2.jpeg Graphic file (type jpg)
 <use Figures/WignerFunctions2.jpeg>
-Package pdftex.def Info: Figures/WignerFunctions2.jpeg  used on input line 764.
+Package pdftex.def Info: Figures/WignerFunctions2.jpeg  used on input line 777.
 
 (pdftex.def)             Requested size: 204.85974pt x 163.7275pt.
 
-Overfull \hbox (47.83548pt too wide) in paragraph at lines 763--765
+Overfull \hbox (47.83548pt too wide) in paragraph at lines 776--778
 []  [] 
  []
 
@@ -969,12 +969,12 @@ g>] [23 <./Figs/CalorMapk45T0.pdf> <./Figures/WignerFunctions1.jpeg> <./Figures
 <Figs/EvolucionEnergiak45.pdf, id=190, 462.52798pt x 346.89601pt>
 File: Figs/EvolucionEnergiak45.pdf Graphic file (type pdf)
 <use Figs/EvolucionEnergiak45.pdf>
-Package pdftex.def Info: Figs/EvolucionEnergiak45.pdf  used on input line 786.
+Package pdftex.def Info: Figs/EvolucionEnergiak45.pdf  used on input line 799.
 (pdftex.def)             Requested size: 341.43306pt x 256.085pt.
 <Figs/FourierCoeffsT0.pdf, id=191, 462.52798pt x 346.89601pt>
 File: Figs/FourierCoeffsT0.pdf Graphic file (type pdf)
 <use Figs/FourierCoeffsT0.pdf>
-Package pdftex.def Info: Figs/FourierCoeffsT0.pdf  used on input line 795.
+Package pdftex.def Info: Figs/FourierCoeffsT0.pdf  used on input line 808.
 (pdftex.def)             Requested size: 341.43306pt x 256.085pt.
 
 
@@ -983,7 +983,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figs/EnergiaCaso1.pdf, id=192, 462.52798pt x 346.89601pt>
 File: Figs/EnergiaCaso1.pdf Graphic file (type pdf)
 <use Figs/EnergiaCaso1.pdf>
-Package pdftex.def Info: Figs/EnergiaCaso1.pdf  used on input line 806.
+Package pdftex.def Info: Figs/EnergiaCaso1.pdf  used on input line 819.
 (pdftex.def)             Requested size: 341.43306pt x 256.085pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -997,80 +997,80 @@ pdfTeX warning: /usr/bin/pdflatex (file ./Figs/EnergiaCaso1.pdf): PDF inclusion
 <Figs/PhaseSpaceInitial.pdf, id=303, 462.52798pt x 346.89601pt>
 File: Figs/PhaseSpaceInitial.pdf Graphic file (type pdf)
 <use Figs/PhaseSpaceInitial.pdf>
-Package pdftex.def Info: Figs/PhaseSpaceInitial.pdf  used on input line 818.
+Package pdftex.def Info: Figs/PhaseSpaceInitial.pdf  used on input line 831.
 (pdftex.def)             Requested size: 184.9429pt x 138.7083pt.
 
-Overfull \hbox (29.33691pt too wide) in paragraph at lines 818--819
+Overfull \hbox (29.33691pt too wide) in paragraph at lines 831--832
 [][] 
  []
 
 <Figs/PhaseSpaceK35.pdf, id=304, 462.52798pt x 346.89601pt>
 File: Figs/PhaseSpaceK35.pdf Graphic file (type pdf)
 <use Figs/PhaseSpaceK35.pdf>
-Package pdftex.def Info: Figs/PhaseSpaceK35.pdf  used on input line 821.
+Package pdftex.def Info: Figs/PhaseSpaceK35.pdf  used on input line 834.
 (pdftex.def)             Requested size: 184.9429pt x 138.7083pt.
 
-Overfull \hbox (29.33691pt too wide) in paragraph at lines 821--822
+Overfull \hbox (29.33691pt too wide) in paragraph at lines 834--835
 [][] 
  []
 
 <Figs/PhaseSpaceK100.pdf, id=305, 462.52798pt x 346.89601pt>
 File: Figs/PhaseSpaceK100.pdf Graphic file (type pdf)
 <use Figs/PhaseSpaceK100.pdf>
-Package pdftex.def Info: Figs/PhaseSpaceK100.pdf  used on input line 824.
-(pdftex.def)             Requested size: 170.71652pt x 128.0372pt.
-
-Overfull \hbox (15.11053pt too wide) in paragraph at lines 824--825
-[][] 
- []
-
-File: Figs/PhaseSpaceInitial.pdf Graphic file (type pdf)
-<use Figs/PhaseSpaceInitial.pdf>
-Package pdftex.def Info: Figs/PhaseSpaceInitial.pdf  used on input line 834.
-(pdftex.def)             Requested size: 170.71652pt x 128.0372pt.
-
-Overfull \hbox (15.11053pt too wide) in paragraph at lines 834--835
-[][] 
- []
-
-<Figs/PhaseSpace725K1000Aft.pdf, id=306, 462.52798pt x 346.89601pt>
-File: Figs/PhaseSpace725K1000Aft.pdf Graphic file (type pdf)
-<use Figs/PhaseSpace725K1000Aft.pdf>
-Package pdftex.def Info: Figs/PhaseSpace725K1000Aft.pdf  used on input line 837
-.
+Package pdftex.def Info: Figs/PhaseSpaceK100.pdf  used on input line 837.
 (pdftex.def)             Requested size: 170.71652pt x 128.0372pt.
 
 Overfull \hbox (15.11053pt too wide) in paragraph at lines 837--838
 [][] 
  []
 
+File: Figs/PhaseSpaceInitial.pdf Graphic file (type pdf)
+<use Figs/PhaseSpaceInitial.pdf>
+Package pdftex.def Info: Figs/PhaseSpaceInitial.pdf  used on input line 847.
+(pdftex.def)             Requested size: 170.71652pt x 128.0372pt.
+
+Overfull \hbox (15.11053pt too wide) in paragraph at lines 847--848
+[][] 
+ []
+
+<Figs/PhaseSpace725K1000Aft.pdf, id=306, 462.52798pt x 346.89601pt>
+File: Figs/PhaseSpace725K1000Aft.pdf Graphic file (type pdf)
+<use Figs/PhaseSpace725K1000Aft.pdf>
+Package pdftex.def Info: Figs/PhaseSpace725K1000Aft.pdf  used on input line 850
+.
+(pdftex.def)             Requested size: 170.71652pt x 128.0372pt.
+
+Overfull \hbox (15.11053pt too wide) in paragraph at lines 850--851
+[][] 
+ []
+
 <Figs/Atractoresk725.pdf, id=307, 462.52798pt x 346.89601pt>
 File: Figs/Atractoresk725.pdf Graphic file (type pdf)
 <use Figs/Atractoresk725.pdf>
-Package pdftex.def Info: Figs/Atractoresk725.pdf  used on input line 840.
+Package pdftex.def Info: Figs/Atractoresk725.pdf  used on input line 853.
 (pdftex.def)             Requested size: 170.71652pt x 128.0372pt.
 
-Overfull \hbox (15.11053pt too wide) in paragraph at lines 840--841
+Overfull \hbox (15.11053pt too wide) in paragraph at lines 853--854
 [][] 
  []
 
 <Figs/EnergiaK25.pdf, id=308, 462.52798pt x 346.89601pt>
 File: Figs/EnergiaK25.pdf Graphic file (type pdf)
 <use Figs/EnergiaK25.pdf>
-Package pdftex.def Info: Figs/EnergiaK25.pdf  used on input line 850.
+Package pdftex.def Info: Figs/EnergiaK25.pdf  used on input line 863.
 (pdftex.def)             Requested size: 241.84842pt x 181.38737pt.
 
-Overfull \hbox (23.03398pt too wide) in paragraph at lines 850--851
+Overfull \hbox (23.03398pt too wide) in paragraph at lines 863--864
 [][] 
  []
 
 <Figs/EnergiaK725.pdf, id=309, 462.52798pt x 346.89601pt>
 File: Figs/EnergiaK725.pdf Graphic file (type pdf)
 <use Figs/EnergiaK725.pdf>
-Package pdftex.def Info: Figs/EnergiaK725.pdf  used on input line 853.
+Package pdftex.def Info: Figs/EnergiaK725.pdf  used on input line 866.
 (pdftex.def)             Requested size: 241.84842pt x 181.38737pt.
 
-Overfull \hbox (23.03398pt too wide) in paragraph at lines 853--854
+Overfull \hbox (23.03398pt too wide) in paragraph at lines 866--867
 [][] 
  []
 
@@ -1080,20 +1080,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figs/FourierCoeffsT01.pdf, id=310, 462.52798pt x 346.89601pt>
 File: Figs/FourierCoeffsT01.pdf Graphic file (type pdf)
 <use Figs/FourierCoeffsT01.pdf>
-Package pdftex.def Info: Figs/FourierCoeffsT01.pdf  used on input line 865.
+Package pdftex.def Info: Figs/FourierCoeffsT01.pdf  used on input line 878.
 (pdftex.def)             Requested size: 241.84842pt x 181.38737pt.
 
-Overfull \hbox (23.03398pt too wide) in paragraph at lines 865--866
+Overfull \hbox (23.03398pt too wide) in paragraph at lines 878--879
 [][] 
  []
 
 <Figs/FourierCoeffsT5.pdf, id=311, 462.52798pt x 346.89601pt>
 File: Figs/FourierCoeffsT5.pdf Graphic file (type pdf)
 <use Figs/FourierCoeffsT5.pdf>
-Package pdftex.def Info: Figs/FourierCoeffsT5.pdf  used on input line 868.
+Package pdftex.def Info: Figs/FourierCoeffsT5.pdf  used on input line 881.
 (pdftex.def)             Requested size: 241.84842pt x 181.38737pt.
 
-Overfull \hbox (23.03398pt too wide) in paragraph at lines 868--869
+Overfull \hbox (23.03398pt too wide) in paragraph at lines 881--882
 [][] 
  []
 
@@ -1121,26 +1121,26 @@ on: multiple pdfs with page group included in a single page
 File: Figs/DistribucionesK20T5Kick40.pdf Graphic file (type pdf)
 <use Figs/DistribucionesK20T5Kick40.pdf>
 Package pdftex.def Info: Figs/DistribucionesK20T5Kick40.pdf  used on input line
- 886.
+ 899.
 (pdftex.def)             Requested size: 512.1496pt x 170.72884pt.
 
-Overfull \hbox (14.2767pt too wide) in paragraph at lines 885--887
+Overfull \hbox (14.2767pt too wide) in paragraph at lines 898--900
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--887
+Underfull \hbox (badness 10000) in paragraph at lines 898--900
 
  []
 
 <Figs/DiferenciasK20T5Kick40.pdf, id=404, 722.7pt x 216.81pt>
 File: Figs/DiferenciasK20T5Kick40.pdf Graphic file (type pdf)
 <use Figs/DiferenciasK20T5Kick40.pdf>
-Package pdftex.def Info: Figs/DiferenciasK20T5Kick40.pdf  used on input line 89
-1.
+Package pdftex.def Info: Figs/DiferenciasK20T5Kick40.pdf  used on input line 90
+4.
 (pdftex.def)             Requested size: 569.05511pt x 170.71892pt.
 
-Overfull \hbox (79.71812pt too wide) in paragraph at lines 890--893
+Overfull \hbox (79.71812pt too wide) in paragraph at lines 903--906
 []  [] 
  []
 
@@ -1174,7 +1174,7 @@ Cap\'{\i }tulo 5.
 ] [32
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 972--973
+Underfull \hbox (badness 10000) in paragraph at lines 985--986
 []\OT1/cmr/m/n/10 Gilchrist, A. (2017), ``\OT1/cmr/m/it/10 Energy in a Dam-ped 
 Har-mo-nic Os-ci-lla-tor\OT1/cmr/m/n/10 '',
  []
@@ -1209,7 +1209,7 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive
 -dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on document.pdf (40 pages, 4538249 bytes).
+Output written on document.pdf (40 pages, 4536771 bytes).
 PDF statistics:
  699 PDF objects out of 1000 (max. 8388607)
  286 compressed objects within 3 object streams

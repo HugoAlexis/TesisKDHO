@@ -267,30 +267,43 @@
 	
 	\chapter{Marco te\'orico}
 	
-	El oscilador arm\'onico pateado, descrito en \cite{GardinerDeltaKicked, PradoTesis}, es un sistema f\'isico que consiste de un \'atomo de dos niveles (o un conjunto de \'atomos sin interacci\'on) cuya din\'amica es la del oscilador arm\'onico, con interacciones peri\'odicas e instant\'aneas (llamadas patadas) generadas con un l\'aser. El movimiento del sistema para una part\'icula de masa $m$ en un oscilador con frecuencia $\omega$ puede ser descrito por el Hamiltoniano
+	El oscilador arm\'onico pateado es un sistema que est\'a descrito por el Hamiltoniano
 	
 	\begin{equation}
-		H = \frac{P^2}{2m} + \frac{M\omega^2x^2}{2} + \frac{\hbar\Omega t_p}{8\Delta}\cos(kX)\sum_{n=-\infty}^{\infty}\delta(t-nT_k)
+		H = \frac{P^2}{2m} + \frac{m\omega^2X^2}{2} + \frac{\kappa}{\sqrt{2}\eta_{\rm LD}^2}\cos(kX)\sum_{n=-\infty}^{\infty}\delta(t-nT_k)
 	\end{equation}
 	
-	\noindent donde $P$ es el momento de la part\'icula y $X$ su posici\'on medida desde el punto de menor potencial del oscilador arm\'onico, medidas en unidades f\'isicas. $\hbar$ es la constante reducida de Plank y t es el tiempo. Las patadas son pulsos realizados cada periodo $T_k$ y tienen una duraci\'on $t_p$ realizadas con un l\'aser de ondas estacionarias. Respecto al l\'aser de ondas estacionarias, $\Delta$ denota la transici\'on de los dos niveles, $\Omega$ es la frecuancia de Rab\'i, y $k=4\pi / \lambda_L$ es su longitud de onda.
+	\noindent donde $P$ es el momento de la part\'icula y $X$ su posici\'on medida desde el punto de menor potencial del oscilador arm\'onico, medidas en unidades f\'isicas. $\hbar$ es la constante reducida de Plank y t es el tiempo, con las patadas realizados cada periodo $T_k$, $\kappa$ es la llamada fuerza de la patada adimensional y $\eta_{\rm LD}$ es el par\'ametro de lamb-dicke.
 	
-	 Tomando los par\'ametros adimensionales para la posici\'on, el momento y el tiempo siguientes:
+	 Tomando los par\'ametros adimensionales para la posici\'on y el momento siguientes:
 	
 	\begin{equation}\label{CambioVariables}
-		x = \sqrt{\frac{m\omega}{\hbar}}X, \verb|    | p = \frac{P}{\sqrt{\hbar m \omega}}, \verb|    | \tau = \omega t,
+		x = \sqrt{\frac{m\omega}{\hbar}}X, \verb|    | p = \frac{P}{\sqrt{\hbar m \omega}}
 	\end{equation}
 	
 	\noindent se puede escribir el Hamiltoniano del sistema como:
 	
-	\begin{equation}\label{Hamiltoniano}
-	H = \omega \hbar \left[ \frac{p^2}{2} + \frac{x^2}{2} \right] + \frac{\kappa}{\sqrt{2}\eta_{\rm LD}^2} \cos \left( \sqrt{2}\eta_{\rm LD} x  \right) \omega\sum_{n\in\mathbb{N}}\delta(\tau - 2\pi\frac{n}{q}).
+	\begin{equation}
+	H = \hbar\omega\ \left[ \frac{p^2+q^2}{2} + \frac{\kappa}{\sqrt{2}\omega\eta_{\rm LD}^2}\cos{(\sqrt{2}\eta_{\rm LD})x}\sum_{n\in\mathbb{N}}\delta(t-nT_k) \right].
 	\end{equation}
 	
-	El t\'ermino $\kappa = \hbar\Omega t_p / (8\sqrt{2}m\omega_o\Delta) $ es la llamada \textit{fuerza de la patada adimensional} y $\eta_{\rm LD} = k\sqrt{\hbar/(2m\omega_o)}$ es el par\'ametro de Lamb-Dicke. Aqu\'i, se ha introducido adem\'as el par\'ametro $q$, que es la relaci\'on entre el periodo fundamental del oscilador arm\'onico $2\pi/\omega$  y el periodo de la patada:
+	Introducimos tambi\'en el par\'ametro para el tiempo adimensional $\tau=\omega t$, donde el periodo del oscilador arm\'onico es simplemente $2\pi$. Usando 
 	
 	\begin{equation}
-		q = \frac{2\pi}{\omega T_k}.
+		\delta(t-nT_k) = \delta[\tau/\omega - 2\pi n/(\omega q)] = \omega\delta(\tau-2\pi n/q),
+	\end{equation}
+	
+	el hamiltoniano queda expresado de la siguiente forma:
+	
+	
+	\begin{equation}\label{Hamiltoniano}
+	H = \omega \hbar \left[ \frac{p^2}{2} + \frac{x^2}{2} + \frac{\kappa}{\sqrt{2}\eta_{\rm LD}^2} \cos \left( \sqrt{2}\eta_{\rm LD} x  \right) \sum_{n\in\mathbb{N}}\delta(\tau - \frac{2\pi}{q}n) \right].
+	\end{equation}
+	
+	Aqu\'i, se ha introducido adem\'as el par\'ametro $q$ que es la relaci\'on entre el periodo fundamental del oscilador arm\'onico $T_{\rm o}$  y el periodo de la patada, el cual tomamos como 4 o 6:
+	
+	\begin{equation}
+		q = \frac{T_o}{T_k}.
 	\end{equation}
 	
 	Por lo tanto el periodo de las patadas es $\tau_k = 2\pi/q$, en unidades adimensionales de $\tau$.
@@ -302,13 +315,13 @@
 	Sin embargo, al considerar el sistema acoplado a un reservorio t\'ermico ya no esposible encontrar las ecuaciones de movimiento mediante un hamiltoniano, debido al intercambio de energ\'ia del sistema con el reservorio. En su lugar, encontramos las trayectorias resolviendo la ecuaci\'on de Langevin dada por: 
 	
 	\begin{equation}\label{LangevinOriginal}
-		\frac{d^2X}{dt^2} + \frac{\gamma}{m}\frac{dX}{dt} + \omega^2 X = \frac{1}{m}\eta_T,
+		\frac{d^2X}{dt^2} + {\gamma}\frac{dX}{dt} + \omega^2 X = \frac{1}{m}\eta_T,
 	\end{equation}
 	
 	\noindent donde $\gamma$ es el coeficiente de acoplamiento entre el sistema y el reservorio, y $\eta_T$ es una fuerza aleatoria que act\'ua sobre la part\'icula debido a la temperatura del entorno  con una distribuci\'on normal, provocando un movimiento browniano, dada por:
 	
 	\begin{equation}\label{EtaTemperatura}
-		\langle \eta_T(t)\eta_T(t') \rangle = 2\gamma k_B T_e\delta(t-t'),
+		\langle \eta_T(t)\eta_T(t') \rangle = 2m\gamma k_B T_e\delta(t-t'),
 	\end{equation}
 	
 	\noindent donde $k_B$ es la constante de Boltzmann, $T_e$ es la temperatura del reservorio, y el t\'ermino $\delta(t-t')$ indica que la fuerza aleatoria se supone independiente para cada tiempo.
@@ -316,7 +329,7 @@
 	Utilizando los par\'ametros adimensionales $x$ y $p$ dados en la ecuaci\'on (\ref{CambioVariables}), se obtine la ecuaci\'on siguiente:
 	
 	\begin{equation}
-		\frac{d^2x}{dt^2} +  \frac{\gamma}{m}\frac{dx}{dt} + \omega^2x = \frac{1}{m} \sqrt{\frac{\hbar}{m\omega}} \eta_T.
+		\frac{d^2x}{dt^2} +  {\gamma}\frac{dx}{dt} + \omega^2x = \frac{1}{m} \sqrt{\frac{\hbar}{m\omega}} \eta_T.
 	\end{equation} 
 	
 	Tomando ahora el par\'ametro para el tiempo $\tau=\omega t$, obtenemos la siguiente derivada:
@@ -336,7 +349,7 @@
 	Por lo que la ecuaci\'on de Langevin (\ref{LangevinOriginal}) queda escrita como:
 	
 	\begin{equation}\label{Langevin}
-		\frac{d^2x}{d\tau^2} + \frac{\gamma}{m\omega}\frac{dx}{d\tau} + x = \frac{1}{\omega}\sqrt{\frac{1}{m\omega\hbar}}\eta_T.
+		\frac{d^2x}{d\tau^2} + \frac{\gamma}{\omega}\frac{dx}{d\tau} + x = \frac{1}{\omega}\sqrt{\frac{1}{m\omega\hbar}}\eta_T.
 	\end{equation} 
 	
 	Durante el efecto de las patadas podemos despreciar el efecto del reservorio t\'ermico durante un intervalo de tiempo arbitrariamente pequeño, debido a que la fuerza es instat\'anea, por lo que el efecto de las patadas se puede encontrar a partir del hamiltoniano del sistema original de la ecuaci\'on (\ref{Hamiltoniano}).
@@ -354,7 +367,7 @@
 		\end{bmatrix}' = 
 		\begin{bmatrix}
 		0 & 1 \\
-		-1 & -\frac{\gamma}{m\omega}
+		-1 & -\frac{\gamma}{\omega}
 		\end{bmatrix}
 		\begin{bmatrix}
 		x \\ p
@@ -370,20 +383,20 @@
 	 El t\'ermino $\eta_T$ de la fuerza aleatoria debido a la temperatura se obtiene a partir de la ecuaci\'on (\ref{EtaTemperatura}). Introduciendo la variable aleatoria $x_j$ con distribuci\'on normal y varianza $\langle x_j^2 \rangle = 1$, podemos escribir dicha ecuaci\'on como
 	
 	\begin{equation}
-		\langle \eta_T(t)x(t)\eta_T(t^{'})x(t^{'}) \rangle = 2\gamma k_BT_e\delta(t-t^{'
+		\langle \eta_T(t)x(t)\eta_T(t^{'})x(t^{'}) \rangle = 2m\gamma k_BT_e\delta(t-t^{'
 		}),
 	\end{equation}
 	
 	\noindent integrando en ambos lados, obtenemos:
 	
 	\begin{equation}
-		\eta_T^2x_j^2\Delta t = 2\gamma k_B T.
+		\eta_T^2x_j^2\Delta t = 2m\gamma k_B T.
 	\end{equation}
 	
 	Por lo tanto, el t\'ermino de la patada aleatoria es\'a dado por
 	
 	\begin{equation}\label{EtaTemperaturaCalculado}
-		\eta_T^2 = \frac{2\gamma k_BT}{\Delta \tau}.
+		\eta_T^2 = \frac{2m\gamma k_BT}{\Delta \tau}.
 	\end{equation}
 	
 	Utilizando el m\'etodo n\'umerico de Euler-Maruyama para resolver ecuaciones diferenciales estoc\'asticas, la ecuaci\'on de Langevin puede ser resuelta por
@@ -398,15 +411,15 @@
 		+ \Delta\tau
 		\begin{bmatrix}
 		0 & 1 \\
-		-1 & -\beta
+		-1 & - \frac{\gamma}{\omega}
 		\end{bmatrix}
 		\begin{bmatrix}
 		x \\ p
 		\end{bmatrix}_n
 		+
 		\begin{bmatrix}
-		0 \\ \frac{1}{\omega}\sqrt{ 2\beta\frac{k_BT}{\hbar}{\Delta t} }
-		\end{bmatrix},
+		0 \\ \sqrt{\Delta \tau}\sqrt{\frac{2\gamma}{\omega}\frac{k_BT_e}{\hbar\omega}}y_n,
+		\end{bmatrix}
 	\end{equation}
 	
 	\noindent donde se ha definido el t\'ermino $\beta = \frac{\gamma}{m\omega}$, el cual tomaremos como constante. El intervalo $\tau_k$ durante el que se resuelve esta ecuaci\'on se ha dividido en N subintervalos iguales $\Delta\tau = \tau_k / N$, y el sub\'indice en los vectores columna del punto en el espacio de fase corresponden al estado despu\'es de ese subintervalo.
@@ -416,32 +429,32 @@
 	Durante el efecto de las patadas podemos despreciar la temperatura del entorno debido a que esta fuerza es instant\'anea, por lo que utilizamos el hamiltoniano del oscilador arm\'onico pateado dado por la ecuaci\'on (\ref{Hamiltoniano}). Utilizando las ecuaciones de Hamilton para el momento, obtenemos:
 	
 	\begin{equation}
-		\dot{p} = -\hbar\omega x + \frac{\omega\kappa}{\eta_{\rm LD}}\sin \left( \sqrt{2} \eta_{\rm LD} x\right) \sum_n\delta(t-n\tau_k).
+		\dot{p} = -x + \frac{\kappa}{\eta_{\rm LD}}\sin \left( \sqrt{2} \eta_{\rm LD} x\right) \sum_n\delta\left(\tau-\frac{2\pi}{q}n\right).
 	\end{equation}
 	
 	El cambio debido a la n-\'esima est\'a dada por
 	
 	\begin{equation}
-		\Delta p = \lim_{\epsilon \rightarrow 0} \int_{n\tau_k-\epsilon}^{n\tau_k+\epsilon} \left[-\hbar\omega x + \frac{\omega\kappa}{\eta_{\rm LD}}\sin (\sqrt{2} \eta_{\rm LD} x) \sum_n\delta(t-n\tau_k) \right]d\tau,
+		\Delta p = \lim_{\epsilon \rightarrow 0} \int_{n\tau_k-\epsilon}^{n\tau_k+\epsilon} \left[-x + \frac{\kappa}{\eta_{\rm LD}}\sin (\sqrt{2} \eta_{\rm LD} x) \sum_n\delta\left(\tau-\frac{2\pi}{q}n\right) \right]d\tau,
 	\end{equation}
 	
 	\noindent con lo que obtenemos:
 	
 	\begin{equation}
-		\Delta p = \frac{\omega\kappa}{\eta_{\rm LD}} \sin \left(\sqrt{2} \eta_{\rm LD} x \right).
+		\Delta p = \frac{\kappa}{\eta_{\rm LD}} \sin \left(\sqrt{2} \eta_{\rm LD} x \right).
 	\end{equation}
 	
 	Por lo tanto,  el estado justo despu\'es de la patada es
 	
 	\begin{equation}\label{EfectoPatada}
-		(x_n,\verb|  | p_n) = (x_n^{'}, \verb|  | p_n^{'} +  \frac{\kappa}{\eta_{\rm LD}} \sin \left(\sqrt{2} \eta_{\rm LD} x \right),
+		(x_n,\verb|  | p_n) = (x_n^{'}, \verb|  | p_n^{'} +  \frac{\kappa}{\eta_{\rm LD}} \sin \left(\sqrt{2} \eta_{\rm LD} x_n \right),
 	\end{equation}
 	
 	\noindent donde $x_n^{'}$ y $p_n^{'}$ son la posici\'on y el momento de la part\'icula justo antes de la n-\'esima patada.
 	
 	\subsection{Din\'amica del sistema}
 	
-	La figura \ref{fig.Temp0vsTempFinita} mestra una trayectoria en el espacio de fase del oscilador arm\'onico pateado, con el reservorio a temperatura cero y con el reservorio a temperatura finita, $k_BT_e = 5$.
+	La figura \ref{fig.Temp0vsTempFinita} mestra una trayectoria en el espacio de fase del oscilador arm\'onico pateado, con el reservorio a temperatura cero y con el reservorio a temperatura finita, $k_BT_e/(\hbar\omega) = 5$.
 	
 	\begin{figure} [h!]
 		\centering 
@@ -481,7 +494,7 @@
 	A partir del mapa del espacio de fase obtenido anteriormente, podemos encontrar la energía promedio de las partículas mediante el promedio de la energía cinética y potencial de cada una de ellas en la n-ésima patada,
 	
 	\begin{equation}
-	\langle E(n) \rangle = \frac{\hbar\omega_o}{N}\sum_{j=1}^{N} (\frac{p_j^2}{2} + \frac{q_j^2}{2}),
+	\langle E(n) \rangle = \frac{\hbar\omega}{N}\sum_{j=1}^{N}\frac{1}{2} \left(p_j^2 + q_j\right),
 	\end{equation}
 	
 	\noindent donde $p_j$ y $q_j$ son las coordenadas de posición y el momento de cada partícula.
